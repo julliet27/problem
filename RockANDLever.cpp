@@ -1,28 +1,21 @@
 #include <bits/stdc++.h>
-#define endline "\n"
-#define fast_io ios_base::sync_with_stdio(false)
-#define ll long long
 using namespace std;
+void selectionSort(int arr[], int n)
+{
+	int i, j, min_idx;
+	for (i = 0; i < n - 1; i++) {
+		min_idx = i;
+		for (j = i + 1; j < n; j++) {
+			if (arr[j] < arr[min_idx])min_idx = j;
+		}
+		if (min_idx != i) swap(arr[min_idx], arr[i]); } }
 int main()
 {
-    fast_io;
-    int t;cin>>t;
-    while(t--){
-        int n;cin>>n;
-        ll ans=0;
-        vector<ll>vec(n,0);
-        for(int i=0;i<n;i++){
-            cin>>vec[i];
-        }
-        for(int j=31;j>=0;j--){
-            ll cnt=0;
-            for(int i=0;i<n;i++){
-                if(vec[i]>=(1<<j) && vec[i]<(1<<(j+1))) cnt++;
-            }
-            ans+=cnt*(cnt-1)/2;
-        }
-        cout<<ans<<endline;
-
-    }
-    return 0;
+	int arr[] = { 64, 25, 12, 22, 11 };
+	int n = sizeof(arr) / sizeof(arr[0]);
+	selectionSort(arr, n);
+	cout << "Sorted array: \n";
+	return 0;
 }
+
+// This is code is contributed by rathbhupendra

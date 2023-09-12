@@ -23,6 +23,5 @@ int main(){
     }
     cout<<ans.size()<<endline;
     for(int i:ans)cout<<i<<" ";
-    cout<<endline;
     return 0;
 }

@@ -11,18 +11,16 @@ int main()
         int n;
         string s;
         cin>>n>>s;
-        unordered_map<int,int>mp;
-        int res=0,sum=0;
+        unordered_map<ll,ll>mp;
+        ll res=0,sum=0;
         mp[0]=1;
         for(int i=0;i<s.size();i++){
             sum+=(int)s[i]-(int)'0';
-            int tmp=sum-i-1;
+            ll tmp=sum-i-1;
             mp[tmp]++;
             res+=mp[tmp]-1;
-            cout<<s[i]<<" "<<tmp<<" "<<mp[tmp]<<" "<<res<<endline;
         }
-        cout<<endline;
-        //cout<<res<<endline;
+        cout<<res<<endline;
         
     }
     return 0;

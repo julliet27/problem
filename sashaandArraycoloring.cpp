@@ -16,7 +16,7 @@ int main()
         for(int i=0;i<n/2;i++){
             sum+=(vec[n-i-1]-vec[i]);
         }
-        cout<<"ANS: "<<sum<<endline;
+        cout<<sum<<endline;
     }
     return 0;
 }

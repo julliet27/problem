@@ -10,17 +10,12 @@ int main()
     while(t--){
         int n;cin>>n;
         vector<int>vec(n,0);
-        int cnt=0;
+        vector<int>pref(n-1,0);
         for(int i=0;i<n;i++) cin>>vec[i];
-        int a=0,b=0;
-        for(int i=0;i<n;i++){
-            if(vec[i]%2!=i%2){
-                if(i%2==0) a++;
-                else b++;
-            }
-        }
-        if(a!=b)cout<<-1<<endline;
-        else cout<<a<<endline;
+        sort(vec.begin(),vec.end());
+        for(int i=1;i<n;i++) pref[i-1]=vec[i]-vec[i-1];
+        int ans=*min_element(pref.begin(),pref.end());
+        cout<<ans<<endline;
     }
     return 0;
 }
