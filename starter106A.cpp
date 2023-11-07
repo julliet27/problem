@@ -5,23 +5,20 @@
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 using namespace std;
 const int mod=1e9+7;
+const int mx=1e9+1;
+int arr[mx];
 int main(){
     fast_cin();
-    int cnt=0;
-    //code 1
-    for(int i=0;i<10;i++){
-        for(int j=0;j<10;j++){
-            cnt++;
-        }
+    memset(arr,0,sizeof(arr));
+    int n,m;cin>>n>>m;
+    for(int i=0;i<n;i++){
+        int a;cin>>a;
+        arr[a]++;
     }
-    cout<<cnt<<endline;
-
-    // code2
-    for(int i=0;i<10;i++){
-        for(int j=0;j<10;i++){
-            cnt++;
-        }
+    for(int i=1;i<mx;i++){
+        arr[i]=arr[i-1]+arr[i];
+        cout<<arr[i];
     }
-    cout<<cnt<<endline;
+    cout<<endline;
     return 0;
 }

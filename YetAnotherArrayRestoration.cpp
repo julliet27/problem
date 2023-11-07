@@ -11,7 +11,17 @@ int main(){
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    #endif               
-	cout<<1+2<<endline;
+    #endif  
+    int t;cin>>t;
+    while(t--){
+        int n,x,y;cin>>n>>x>>y;
+        int diff=y-x;
+        int num=n;
+        vector<int>vec;
+        vec.push_back(y);
+        vec.push_back(x);
+        while(diff%num!=0 && num>2) num--;
+        cout<<diff<<" "<<num<<endline;
+    }             
     return 0;
 }

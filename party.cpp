@@ -12,6 +12,18 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    int n;cin>>n;
+    int mx=-1;
+    vector<int>vec(n+1,0);
+    for(int i=1;i<=n;i++){cin>>vec[i];}
+    for(int i=n;i>=1;i--){
+        int cnt=0,num=i;
+        while(num!=-1){
+            num=vec[num];
+            cnt++;
+        }
+        mx=max(cnt,mx);
+    }
+    cout<<mx<<endline;
     return 0;
 }

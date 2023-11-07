@@ -8,10 +8,7 @@ const int mod=1e9+7;
 
 int main(){
     fast_cin();
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif               
-	cout<<1+2<<endline;
+    string S,T;cin>>S>>T;
+    cout<<S<<" "<<"san"<<endline;               
     return 0;
 }

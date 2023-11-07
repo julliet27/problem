@@ -12,6 +12,16 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    int t;cin>>t;
+    while(t--){
+        int n;cin>>n;
+        int sum=0,mn=INT_MAX;
+        while(n--){
+            int a;cin>>a;
+            sum+=a;
+            mn=min(mn,a);
+        }
+        cout<<sum-mn<<endline;
+    }
     return 0;
 }

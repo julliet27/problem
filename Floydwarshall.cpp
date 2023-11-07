@@ -6,12 +6,19 @@
 using namespace std;
 const int mod=1e9+7;
 
+
 int main(){
     fast_cin();
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    #endif               
-	cout<<1+2<<endline;
+    #endif         
+    int n;cin>>n;
+    while(n--){
+        int a,b,c;cin>>a>>b>>c;
+        adjacent[a].push_back(make_pair(c,b));
+        adjacent[b].push_back(make_pair(c,a));
+    }
+    printShortestPath();
     return 0;
 }

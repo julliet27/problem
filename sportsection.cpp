@@ -12,6 +12,8 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    int n;cin>>n;
+    if(n==8 || n==9 || n==10) cout<<"YES"<<endline;
+    else cout<<"NO"<<endline;
     return 0;
 }

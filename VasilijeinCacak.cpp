@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#define ll long long int
+#define ll unsigned long long int
 #define u int
 #define endline "\n"
 #define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
@@ -11,7 +11,14 @@ int main(){
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    #endif               
-	cout<<1+2<<endline;
+    #endif     
+    int t;cin>>t;
+    while(t--){
+        ll n,k,x;cin>>n>>k>>x;
+        ll min_sum=(k*(k+1));
+        ll max_sum=(n*(n+1)-(n-k)*(n-k+1));
+        if(min_sum<=2*x && 2*x<=max_sum) cout<<"YES"<<endline;
+        else cout<<"NO"<<endline;
+    }
     return 0;
 }

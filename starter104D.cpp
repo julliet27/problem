@@ -12,6 +12,21 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    int t;cin>>t;
+    while(t--){
+        int x,y,k;cin>>x>>y>>k;
+         if( x==y) cout<<x+y<<endline;
+         else{
+            while(k>0 && x!=y ){
+                int a=x;
+                x=max(x,y);
+                y=min(a,y);
+                x=__gcd(x,y);
+                y=(x*y)/x;
+                k--;
+            }
+            cout<<x+y<<endline;
+         }
+    }
     return 0;
 }

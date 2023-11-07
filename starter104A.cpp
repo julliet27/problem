@@ -12,6 +12,7 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    int n;cin>>n;
+    cout<<2*n<<endline;
     return 0;
 }

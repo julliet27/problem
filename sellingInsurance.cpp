@@ -12,6 +12,12 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    int t;cin>>t;
+    while(t--){
+        int n;cin>>n;
+        int num=(100/(n*0.2));
+        if (100%n!=0) num++;
+        cout<<num<<endline;
+    }
     return 0;
 }

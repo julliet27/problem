@@ -12,6 +12,16 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    ll n;cin>>n;
+    ll ten=1,nine=1,eight=1;
+    while(n){
+        ten=(ten*10)%mod;
+        nine=(nine*9)%mod;
+        eight=(eight*8)%mod;
+        n--;
+    }
+    ll ans=(ten-nine-nine+eight)%mod;
+    ans=(ans+mod)%mod;
+    cout<<ans<<endline;
     return 0;
 }

@@ -12,6 +12,13 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    int n;cin>>n;
+    set<int>S;
+    for(int i=0;i<n;i++){
+        int a;cin>>a;
+        S.insert(a);
+    }
+    if(S.size()==1) cout<<"Yes"<<endline;
+    else cout<<"No"<<endline;
     return 0;
 }

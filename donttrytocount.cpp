@@ -12,6 +12,19 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    int t;cin>>t;
+    while(t--){
+        int n,m;cin>>n>>m;
+        string x,s;cin>>x>>s;
+        int cnt=0;
+        string tmp=x;
+        while(tmp.find(s)==string::npos && tmp.size()<=25){
+            cnt++;
+            tmp+=tmp;
+        }
+        if(tmp.find(s)==string::npos) cout<<-1<<endline;
+        else cout<<cnt<<endline;
+
+    }
     return 0;
 }

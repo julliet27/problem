@@ -12,6 +12,16 @@ int main(){
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif               
-	cout<<1+2<<endline;
+    int t;cin>>t;
+    while(t--){
+        int n,k;cin>>n>>k;
+        bool flag=false;
+        for(int i=0;i<n;i++){
+            int a;cin>>a;
+            if(a==k) flag=true;
+        }
+        if(flag) cout<<"YES"<<endline;
+        else cout<<"NO"<<endline;
+    }
     return 0;
 }
